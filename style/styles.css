@@ -1,0 +1,195 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    background-image: url("../images/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header{
+    background-color: aliceblue;
+}
+
+header h1{
+    margin: 0;
+    padding: 1%;
+    font-size: 3vw;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: darkcyan;
+}
+
+.navbar ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+}
+
+.navbar ul li{
+    float: left;
+}
+
+.navbar ul li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.navbar ul li a:hover{
+    background-color: black;
+}
+
+.introductory{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3px;
+}
+
+.introductory ul{
+    list-style-type: none;
+}
+
+.introductory ul li{
+    font-size: 2vw;
+    margin-top: 3%;
+}
+
+.introductory ul li:first-child{
+    font-size: 2vw;
+    margin-top: 0%;
+}
+
+.introductory img{
+    width: 15%;
+    border-radius: 15%;
+    border: 1px dashed black;
+}
+
+main p{
+    text-align: justify;
+    font-size: 2vw;
+}
+
+.content-spacing{
+    padding: 1% 2% 0% 2%;
+}
+
+article ol{
+    display: flex;
+    list-style-type: none;
+    padding: 2px;
+}
+
+article ol li{
+    margin-top: 1%;
+    font-size: 1.5vw;
+    margin-left: 2%;
+    text-align: justify;
+}
+
+article h2{
+    font-size: 1.75vw;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    font-size: 1.25vw;
+}
+
+footer div{
+    margin-left: 5%;
+}
+
+.footer-design ul{
+    list-style-type: none;
+}
+
+.footer-design ul li a{
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 774px){
+    header h1{
+        margin: 0;
+        padding: 1%;
+        font-size: 7vw;
+    }
+
+    .navbar{
+        display: block;
+    }
+
+    .introductory{
+        font-size: 10vw;
+    }
+
+    .content-spacing{
+        padding: 0% 1% 0% 1%;
+    }
+
+    main p{
+        font-size: 5vw;
+    }
+
+    .introductory{
+        display: block;
+    }
+
+    .introductory ul{
+        padding: 2px;
+    }
+
+    .introductory img{
+        width: 100%;
+        border-radius: 15%;
+        border: 1px solid black;
+    }
+
+    .introductory ul li:first-child{
+        font-size: 5vw;
+    }
+
+    .introductory ul li{
+        font-size: 5vw;
+    }    
+
+    .navbar ul li{
+        float: none;
+    }
+
+    article ol{
+        padding: 2px;
+    }
+
+    article ol li{
+        margin-top: 1%;
+        font-size: 5vw;
+    }
+    
+    article h2{
+        font-size: 5vw;
+    }
+
+    article ol{
+        display: block;
+        list-style-type:decimal;
+        padding: 5%;
+    }
+
+    footer{
+        display: block;
+        font-size: 5vw;
+    }
+}
