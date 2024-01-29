@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SigmaCoder</title>
+    <link rel="stylesheet" href="./style/styles.css">
+</head>
+<body>
+    <header>
+        <h1>SigmaCoder</h1>
+    </header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="assignment3.html">Multimedia</a></li>
+            <li><a href="assignment4.html">Commission</a></li>
+            <li><a href="assignment5.html">Resume</a></li>
+            <li><a href="assignment6.html">Location</a></li>
+            <li><a href="assignment7.html">Mini Game</a></li>
+            <li><a href="assignment8.html">Memory Wall</a></li>
+        </ul>
+    </nav>
+    <main class="center">
+        <div>
+            <h1 class="text-adjust">Memory Wall</h1>
+            <label class="text-adjust" for="keyInput">Memory Key(unique and memorable):</label><br>
+            <input class="width-adjust" type="text" id="keyInput" placeholder="Enter key"><br><br>
+            
+            <label class="text-adjust" for="valueInput">Your thoughts about this website:</label><br>
+            <textarea class="width-adjust" type="text" id="valueInput" placeholder="Enter value" rows="7" cols="22"></textarea><br><br>
+            
+            <button class="width-adjust" onclick="saveData()">Save Data</button><br>
+            <button class="width-adjust" onclick="retrieveData()">Retrieve Data</button>
+        </div>
+    </main>
+    <footer class="content-spacing">
+        <h3>SigmaCoder</h3>
+        <div class="footer-design">
+            <h3>Socials</h3>
+            <ul>
+                <li><a href="https://web.facebook.com/gerryvien.flores.1">Facebook</a></li>
+                <li><a href="https://www.instagram.com/itsgerrykun/">Instagram</a></li>
+                <li><a href="https://github.com/05-14th">Github</a></li>
+            </ul>
+        </div>
+        <div class="footer-design">
+            <h3>Navigate</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="assignment3.html">Multimedia</a></li>
+                <li><a href="assignment4.html">Commission</a></li>
+                <li><a href="assignment5.html">Resume</a></li>
+                <li><a href="assignment6.html">Location</a></li>
+                <li><a href="assignment7.html">Mini Game</a></li>
+                <li><a href="assignment8.html">Memory Wall</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+        function saveData() {
+          const key = document.getElementById('keyInput').value;
+          const value = document.getElementById('valueInput').value;
+          localStorage.setItem(key, value);
+          alert('Data saved to local storage!');
+        }
+      
+        function retrieveData() {
+          const key = document.getElementById('keyInput').value;
+          const storedValue = localStorage.getItem(key);
+          document.getElementById('valueInput').value = storedValue;
+        }
+      </script>
+</body>
+</html>
