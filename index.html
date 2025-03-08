@@ -1,77 +1,173 @@
 <!DOCTYPE html>
-    <html lang="en-us">
-    <head>
-        <title>SigmaCoder</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="./style/styles.css" rel="stylesheet">
-    </head>
-    <body>
-        <header>
-            <h1>SigmaCoder</h1>
-        </header>
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="assignment3.html">Multimedia</a></li>
-                <li><a href="assignment4.html">Commission</a></li>
-                <li><a href="assignment5.html">Resume</a></li>
-                <li><a href="assignment6.html">Location</a></li>
-                <li><a href="assignment7.html">Mini Game</a></li>
-                <li><a href="assignment8.html">Memory Wall</a></li>
-            </ul>
-        </nav>
-        <section>
-            <main class="content-spacing">
-                <div class = "introductory">
-                    <img src="./images/profilepic.png" alt="Author's Picture">
-                    <ul>
-                        <li><b>Name:</b> Gerry Vien Flores</li>
-                        <li><b>Age:</b> 19</li>
-                        <li><b>Favorite PL:</b> PHP, C#, Javascript, Python, Java</li>
-                        <li><b>Dream Title:</b> Game Developer, GOAT of Computer Programming</li>
-                        <li><b>Motto in Life:</b> "Marami pa akong kakaining bigas, Unahin na kita"</li>
-                    </ul>
-                </div>
-                <p>
-                    I'am a Bachelor of Science in Information Technology student in Camarines Norte State College and I like breaking my limits in terms of computer programming.
-                    I explore a lot to a point that I put my files in danger while exploring new technologies like Linux or creating an endless loop of widget to simulate how a
-                    computer malware works. I also take commissions related to Computer Programming, 3D Modelling and Design, or any Computer-Related Projects. Finally, I am actively
-                    searching for computer-related seminars and competitions for additional learnings and credentials.
-                </p>
-            </main>
-            <article class="content-spacing">
-                <h2>Latest Update for 2024</h2>
-                <ol>
-                    <li>AppCon Project is still ongoing. This is expected to be finished before April. Hopefully.</li>
-                    <li>No current commission project. Me and my team are actively searching for a commission project.</li>
-                    <li>No Women, No Problem. Valentines day is coming but I will be busy debugging.</li>
-                    <li>Course Report: Cloudy with the chance with the chance of simultaneous project distribution.</li>
-                    <li>Most productive hours are between 12 AM to 3 AM. Don't ask me how or why.</li>
-                </ol>
-            </article>
-        </section>
-        <footer class="content-spacing">
-            <h3>SigmaCoder</h3>
-            <div class="footer-design">
-                <h3>Socials</h3>
-                <ul>
-                    <li><a href="https://web.facebook.com/gerryvien.flores.1">Facebook</a></li>
-                    <li><a href="https://www.instagram.com/itsgerrykun/">Instagram</a></li>
-                    <li><a href="https://github.com/05-14th">Github</a></li>
-                </ul>
-            </div>
-            <div class="footer-design">
-                <h3>Navigate</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="assignment3.html">Multimedia</a></li>
-                    <li><a href="assignment4.html">Commission</a></li>
-                    <li><a href="assignment5.html">Resume</a></li>
-                    <li><a href="assignment6.html">Location</a></li>
-                    <li><a href="assignment7.html">Mini Game</a></li>
-                    <li><a href="assignment8.html">Memory Wall</a></li>
-                </ul>
-            </div>
-        </footer>
-    </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SigmaCoder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+    }
+    .content-spacing {
+      padding: 2rem 0;
+    }
+    .introductory img {
+      max-width: 150px;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">SigmaCoder</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container content-spacing">
+    <!-- Introduction Section -->
+    <section class="mb-5">
+      <div class="row align-items-center">
+        <div class="col-md-4 text-center">
+          <img src="./images/profilepic.png" alt="Author's Picture" class="img-fluid">
+        </div>
+        <div class="col-md-8">
+          <h1>I am Gerry Vien Flores</h1>
+          <p>
+            Currently a freelancer and student who's aiming to hone my skills to cater quality service into the tech industry.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skillset Section -->
+    <section class="mb-5">
+      <h2 class="mb-4">My Current Skillset</h2>
+      <div class="row g-3">
+        <div class="col-4 col-md-2 text-center">
+          <img src="https://www.php.net/images/logos/new-php-logo.svg" alt="PHP" width="70" height="auto" >
+        </div>
+        <div class="col-4 col-md-2 text-center">
+          <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" alt="Python" width="70" height="auto">
+        </div>
+        <div class="col-4 col-md-2 text-center">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Logo_C_sharp.svg" alt="C#" width="70" height="auto">
+        </div>
+        <div class="col-4 col-md-2 text-center">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/VB.NET_Logo.svg" alt="vbNet" width="70" height="auto">
+        </div>
+        <div class="col-4 col-md-2 text-center">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" alt="JS" width="70" height="auto">
+        </div>
+        <div class="col-4 col-md-2 text-center">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" alt="TS" width="70" height="auto">
+        </div>
+        <div class="col-4 col-md-2 text-center">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React" width="70" height="auto">
+        </div>
+        <div class="col-4 col-md-2 text-center">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" alt="Bootstrap" width="70" height="auto">
+        </div>
+        <div class="col-4 col-md-2 text-center">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" alt="Tailwind" width="70" height="auto">
+        </div>
+        <div class="col-4 col-md-2 text-center">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/MySQL_textlogo.svg" alt="MySql" width="70" height="auto">
+        </div>
+        <div class="col-4 col-md-2 text-center">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/MongoDB_Logo.svg" alt="MongoDb" width="70" height="auto">
+        </div>
+        <div class="col-4 col-md-2 text-center">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Android_logo_2019_%28stacked%29.svg" alt="Android" width="70" height="auto">
+        </div>
+        <div class="col-4 col-md-2 text-center">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/New_Firebase_logo.svg" alt="Firebase" width="70" height="auto">
+        </div>
+      </div>
+    </section>
+
+    <!-- Works Section -->
+    <section class="mb-5">
+      <h2 class="mb-4">My Works</h2>
+      <div class="row g-3">
+        <div class="col-md-4 text-justify">
+          <div class="text-center">
+            <a href="">
+              <img src="" alt="olsmg" width="70" height="auto">
+            </a>
+          </div>
+          <h5 class="text-center">Transaction Recording System</h5>
+          <p class="text-left">This system allows user to record transactions of products. It has automatic calculation feature, receipt generation, and user-friendly UI.</p>
+        </div>
+        <div class="col-md-4 text-justify">
+          <div class="text-center">
+            <a href="">
+              <img src="" alt="mediweb" width="70" height="auto">
+            </a>
+            <h5 class="text-center">Medical Recording Web App</h5>
+            <p class="text-left">A medical-related web application use for creating and storing medical records.</p>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <a href="">
+            <img src="" alt="tourism" width="70" height="auto">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="mb-5">
+      <h2 class="mb-4">Contact Me</h2>
+      <div class="row g-3">
+        <div class="col-4 col-md-2 text-center">
+          <a href="https://www.instagram.com/itsgerrykun/">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="instagram" width="70" height="auto">
+          </a>
+        </div>
+        <div class="col-4 col-md-2 text-center">
+          <a href="https://www.linkedin.com/in/gerry-vien-flores-224811248/">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="linkedin" width="70" height="auto">
+          </a>
+        </div>
+        <div class="col-4 col-md-2 text-center">
+          <a href="https://github.com/05-14th">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="github" width="70" height="auto">
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-center text-light py-3">
+    <div class="container">
+      <p class="mb-0">SigmaCoder &copy; 2025</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
