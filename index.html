@@ -7,20 +7,16 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    body,html{
+    body, html {
       height: 100%;
-      /*background-image: url("images/bg.jpg");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;*/
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     }
 
     .parallax {
-      /* The image used */
       background-image: url("images/bg.jpg");
       min-height: 100vh;
-      display:flex;
-      /* Create the parallax scrolling effect */
+      display: flex;
       background-attachment: fixed;
       background-position: center;
       background-repeat: no-repeat;
@@ -35,22 +31,142 @@
       padding: 2rem;
     }
 
-    .bg2{
+    .bg2 {
       background-image: url("images/bg2.jpg");
       background-repeat: no-repeat;
-      background-size: 100%;
+      background-size: cover;
+      background-position: center;
+      width: 100vw;
+      position: relative;
+      
     }
 
-    .introductory{
+    .introductory {
       max-width: 150px;
       border-radius: 50%;
     }
 
-    img.img-fluid {
+    img.img-fluid.profile-pic {
       border-radius: 50%;
-      width: 50%;
-      height: 50%; 
-      object-fit: cover; 
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border: 5px solid white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    /* Skill icons styling */
+    .skill-icon {
+      width: 50px;
+      height: 50px;
+      margin: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .skill-icon:hover {
+      transform: scale(1.2);
+    }
+
+    /* Project cards styling */
+    .project-card {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      height: 100%;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .project-img {
+      border-radius: 8px;
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+    }
+
+    /* Social media icons */
+    .social-icon {
+      width: 40px;
+      height: 40px;
+      margin: 0 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .social-icon:hover {
+      transform: scale(1.2);
+    }
+
+    /* Section headings */
+    .section-heading {
+      position: relative;
+      padding-bottom: 15px;
+      margin-bottom: 30px;
+    }
+
+    .section-heading:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: #0d6efd;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .profile-pic {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 20px;
+      }
+      
+      .content-spacing {
+        padding: 1.5rem;
+      }
+      
+      h1 {
+        font-size: 1.8rem !important;
+      }
+      
+      .skill-icon {
+        width: 40px;
+        height: 40px;
+      }
+      
+      .project-card {
+        margin-bottom: 30px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .content-spacing {
+        padding: 1rem;
+      }
+      
+      .profile-pic {
+        width: 120px;
+        height: 120px;
+      }
+      
+      .skill-icon {
+        width: 30px;
+        height: 30px;
+        margin: 5px;
+      }
+      
+      .social-icon {
+        width: 35px;
+        height: 35px;
+      }
     }
   </style>
 </head>
@@ -86,18 +202,20 @@
     <div class="d-block">
       <!-- Introduction Section -->
       <section id="home" class="mb-5 content-spacing d-flex justify-content-center align-items-center vh-100">
-        <div class="row align-items-center">
-          <div class="col-md-4 text-center">
-            <img src="./images/profilepic.jpg" alt="Author's Picture" class="img-fluid">
-          </div>
-          <div class="col-md-8">
-            <h1 class="text-uppercase fs-2">Greetings, I am Gerry Vien Flores</h1>
-            <p class="fw-normal lead lh-base text-justify">
-              Currently a Freelancer and a Student who's aiming to hone my skills to cater quality service into the tech industry.
-              I specialize in Full-stack Web Development, Software Development, and Android Application Development. I'm involved in 
-              in several development projects with the intent of gaining experience and improve my skills to be efficient in providing
-              IT solutions to clients.
-            </p>
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-4 text-center mb-4 mb-lg-0">
+              <img src="./images/profilepic.jpg" alt="Author's Picture" class="img-fluid profile-pic">
+            </div>
+            <div class="col-lg-8">
+              <h1 class="text-uppercase fs-2 mb-4 text-white">Greetings, I am Gerry Vien Flores</h1>
+              <p class="fw-normal lead lh-base text-white">
+                Currently a Freelancer and a Student who's aiming to hone my skills to cater quality service into the tech industry.
+                I specialize in Full-stack Web Development, Software Development, and Android Application Development. I'm involved in 
+                several development projects with the intent of gaining experience and improve my skills to be efficient in providing
+                IT solutions to clients.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -105,7 +223,7 @@
       <!-- Skillset Section -->
       <section id="skills" class="mb-5 bg-light content-spacing d-flex justify-content-center align-items-center vh-100 bg2">
         <div class="d-block">
-          <h2 class="mb-4 text-center">My Current Skillset</h2>
+          <h2 class="mb-4 text-center text-white">My Current Skillset</h2>
           <br><br>
           <div class="row g-3">
             <div class="col-4 col-md-2 text-center">
@@ -139,85 +257,89 @@
               <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/MySQL_textlogo.svg" alt="MySql" width="70" height="auto">
             </div>
             <div class="col-4 col-md-2 text-center">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/MongoDB_Logo.svg" alt="MongoDb" width="70" height="auto">
+              <img src="https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg" alt="MongoDb" width="70" height="auto">
             </div>
             <div class="col-4 col-md-2 text-center">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Android_logo_2019_%28stacked%29.svg" alt="Android" width="70" height="auto">
+              <img src="https://www.vectorlogo.zone/logos/android/android-icon.svg" alt="Android" width="70" height="auto">
             </div>
             <div class="col-4 col-md-2 text-center">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/New_Firebase_logo.svg" alt="Firebase" width="70" height="auto">
+              <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="Firebase" width="70" height="auto">
+            </div>
+            <div class="col-4 col-md-2 text-center">
+              <img src="https://www.vectorlogo.zone/logos/godotengine/godotengine-icon.svg" alt="Firebase" width="70" height="auto">
             </div>
           </div>
         </div>
       </section>
 
       <!-- Works Section -->
-      <section id="works" class="mb-5 content-spacing d-flex justify-content-center align-items-center vh-100 ">
-        <div class="d-block">
-          <h2 class="mb-4 text-center">My Works</h2>
-          <br><br>
-        <div class="row g-3">
-          <div class="col-md-4 text-justify">
-            <div class="text-center">
-              <a href="https://github.com/05-14th/OLSMG_TRS">
-                <img src="images/olsmg.png" alt="olsmg" width="200" height="auto">
-              </a>
-            </div><br>
-            <h5 class="text-center">Transaction Recording System</h5>
-            <p class="text-left">This system allows user to record transactions of products. It has automatic calculation feature, receipt generation, and user-friendly UI.</p>
-          </div>
-          <div class="col-md-4 text-justify">
-            <div class="text-center">
-              <a href="https://github.com/05-14th/Medical_Recording_System">
-                <img src="images/mediweb.png" alt="mediweb" width="200" height="auto">
-              </a>
+      <section id="works" class="mb-5 content-spacing d-flex justify-content-center align-items-center min-vh-100">
+        <div class="container">
+          <h2 class="section-heading text-center text-white">My Works</h2>
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="project-card">
+                <div class="text-center">
+                  <a href="https://github.com/05-14th/OLSMG_TRS">
+                    <img src="images/olsmg.png" alt="olsmg" class="project-img">
+                  </a>
+                </div>
+                <h5 class="text-center">Transaction Recording System</h5>
+                <p>This system allows user to record transactions of products. It has automatic calculation feature, receipt generation, and user-friendly UI.</p>
+              </div>
             </div>
-            <br>
-            <h5 class="text-center">Medical Recording Web App</h5>
-            <p class="text-left">A medical-related web application use for creating and storing medical records.</p>
-          </div>
-          <div class="col-md-4 text-justify">
-            <div class="text-center">
-              <a href="https://github.com/05-14th/tourism-website">
-                <img src="images/tourism.PNG" alt="tourism" width="200" height="auto">
-              </a>
+            <div class="col-md-4">
+              <div class="project-card">
+                <div class="text-center">
+                  <a href="https://github.com/05-14th/Medical_Recording_System">
+                    <img src="images/mediweb.png" alt="mediweb" class="project-img">
+                  </a>
+                </div>
+                <h5 class="text-center">Medical Recording Web App</h5>
+                <p>A medical-related web application use for creating and storing medical records.</p>
+              </div>
             </div>
-            <br>
-            <h5 class="text-center">Tourism Web App</h5>
-            <p class="text-left">A web app that features Camarines Norte including beautiful views and mouth-watering delicacy.</p>
+            <div class="col-md-4">
+              <div class="project-card">
+                <div class="text-center">
+                  <a href="https://github.com/05-14th/tourism-website">
+                    <img src="images/tourism.PNG" alt="tourism" class="project-img">
+                  </a>
+                </div>
+                <h5 class="text-center">Tourism Web App</h5>
+                <p>A web app that features Camarines Norte including beautiful views and mouth-watering delicacy.</p>
+              </div>
+            </div>
           </div>
-        </div>
         </div>
       </section>
     </div>
   </div>
 
   <!-- Footer -->
-  <footer id="contact" class="bg-dark text-center text-light py-3">
+  <footer id="contact" class="bg-dark text-center text-light py-5">
     <div class="container">
-      <p class="mb-1">CodeView &copy; 2025</p>
-      <p class="mb-3">Let's connect!</p> <!-- Changed from H2 for better footer structure -->
-  
-      <div class="row justify-content-center g-3">
-        <div class="col-4 col-md-2 text-center">
-          <a href="https://www.instagram.com/itsgerrykun/">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" width="50" height="50">
+      <h2 class="mb-4">Let's connect!</h2>
+      <div class="row justify-content-center g-3 mb-4">
+        <div class="col-auto">
+          <a href="https://www.instagram.com/itsgerrykun/" class="text-decoration-none">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" class="social-icon">
           </a>
         </div>
-        <div class="col-4 col-md-2 text-center">
-          <a href="https://www.linkedin.com/in/gerry-vien-flores-224811248/">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn" width="50" height="50">
+        <div class="col-auto">
+          <a href="https://www.linkedin.com/in/gerry-vien-flores-224811248/" class="text-decoration-none">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn" class="social-icon">
           </a>
         </div>
-        <div class="col-4 col-md-2 text-center">
-          <a href="https://github.com/05-14th">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" width="50" height="50" class="bg-white border border-secondary">
+        <div class="col-auto">
+          <a href="https://github.com/05-14th" class="text-decoration-none">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" class="social-icon bg-white rounded">
           </a>
         </div>
       </div>
+      <p class="mb-0">CodeView &copy; 2025</p>
     </div>
   </footer>
-  
 
   <!-- Bootstrap JS Bundle (includes Popper) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
