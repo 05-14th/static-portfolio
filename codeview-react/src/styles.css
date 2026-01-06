@@ -287,3 +287,25 @@ section::after {
   }
 }
 
+.text-panel {
+  max-width: 680px;
+  padding: 28px 32px;
+  background: rgba(5, 10, 20, 0.72);
+  border-radius: 16px;
+  backdrop-filter: blur(6px);
+}
+
+.text-panel h1 {
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.text-panel h2 {
+  color: #7dd3fc;
+}
+
+.text-panel p {
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.75;
+  font-size: 16px;
+}

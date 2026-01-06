@@ -50,12 +50,23 @@ export default function App() {
               <img src="/images/flores.png" alt="Author" className="img-fluid profile-pic" />
             </div>
             <div className="col-lg-8">
-              <h1 className="text-uppercase fs-2 mb-4 text-white">Greetings, I am Gerry Vien Flores</h1>
-              <p className="fw-normal lead lh-base text-white">
-                I am currently a Software Developer in Clario Capital and an IT Student in Camarines Norte State College. I specialize in Web Development, Software Development, and Automation.
-                I am involved in several development projects to gain experience and improve my skills to be efficient in providing
-                IT solutions to clients.
-              </p>
+              <div className="text-panel">
+                <h1 className="text-uppercase fw-bold fs-1 mb-3">
+                  Gerry Vien Flores
+                </h1>
+
+                <h2 className="fs-5 fw-semibold mb-4">
+                  Software Developer • IT Student
+                </h2>
+
+                <p className="lead mb-3">
+                  I am a Software Developer at Clario Capital and an IT student at Camarines Norte State College, with a strong focus on web development, software development, and automation.
+                </p>
+
+                <p>
+                  I actively participate in development projects to gain hands-on experience and continuously improve my skills in delivering efficient and reliable IT solutions.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -110,7 +121,7 @@ export default function App() {
           <div className="row g-4" data-sr="stagger">
             {[
               {
-                href: 'https://github.com/05-14th/OLSMG_TRS',
+                href: 'https://youtu.be/NiuGTn1yQ-k?si=CBiQFNwja7SIThWX',
                 img: '/images/olsmg.png',
                 title: 'Transaction Recording System',
                 desc: 'Record transactions of products with automatic calculation, receipt generation, and user friendly UI.'
@@ -128,13 +139,13 @@ export default function App() {
                 desc: 'Features Camarines Norte views and delicacies with a control panel for quick updates.'
               },
               {
-                href: '#works',
+                href: 'https://youtu.be/LTV6D4djs4U?si=PhUe2S-2AzqHnhnx',
                 img: '/images/punctoai.png',
                 title: 'Puncto Ai',
                 desc: 'Grammar, punctuation, and spelling correction with highlighting. Powered by datasets from Hugging Face.'
               },
               {
-                href: '#works',
+                href: 'https://youtu.be/XAl52Pq1FZs?si=GP8Q9Sbno5gePuOd',
                 img: '/images/biohome.png',
                 title: 'BioHome Game',
                 desc: 'Educational Android game about biomolecules. Teaches with interactive gameplay.'
