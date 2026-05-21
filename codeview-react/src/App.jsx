@@ -60,11 +60,11 @@ export default function App() {
                 </h2>
 
                 <p className="lead mb-3">
-                  I am a Software Developer at Clario Capital and an IT student at Camarines Norte State College, with a strong focus on web development, software development, and automation.
+                  Software Developer at Clario Capital and IT student at Camarines Norte State College, specializing in web development, custom software, and intelligent automation that turns complex workflows into streamlined, scalable systems.
                 </p>
 
                 <p>
-                  I actively participate in development projects to gain hands-on experience and continuously improve my skills in delivering efficient and reliable IT solutions.
+                  I partner with businesses and teams to design and ship reliable, high-impact solutions — from full-stack web platforms to AI-powered tools — engineered to drive measurable efficiency, reduce overhead, and deliver real results.
                 </p>
               </div>
             </div>
@@ -154,7 +154,7 @@ export default function App() {
                 href: 'https://doi.org/10.5281/zenodo.14510257',
                 img: '/images/simulation.jpeg',
                 title: 'Queen Pineapple Supply Chain Simulation',
-                desc: 'Identifies inefficiencies and supports strategy design using AnyLogic.'
+                desc: 'A research-backed simulation study analyzing the Queen Pineapple supply chain in Camarines Norte — modeling logistics flows, identifying bottlenecks, and informing data-driven strategies for local growers and distributors. Published as an academic paper and built with AnyLogic and Java.'
               },
             ].map(card => (
               <div key={card.title} className="col-12 col-md-6 col-lg-4 text-white reveal">
