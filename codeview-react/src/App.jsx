@@ -124,31 +124,31 @@ export default function App() {
                 href: 'https://youtu.be/NiuGTn1yQ-k?si=CBiQFNwja7SIThWX',
                 img: '/images/olsmg.png',
                 title: 'Transaction Recording System',
-                desc: 'Record transactions of products with automatic calculation, receipt generation, and user friendly UI.'
+                desc: 'A VB.NET-powered point-of-sale solution that streamlines product transactions through automatic computations, instant receipt printing, and an intuitive cashier-friendly interface — cutting down manual entry errors and boosting store recording efficiency by 30%. Built with VB.NET and MySQL.'
               },
               {
                 href: 'https://github.com/05-14th/Medical_Recording_System',
                 img: '/images/mediweb.png',
                 title: 'Medical Recording Web App',
-                desc: 'Create and store medical records with a simple input and output flow delivered via website.'
+                desc: 'A PHP-based web platform that digitizes patient profiles, prescriptions, and visit histories with a clean input-output workflow — replacing tedious paper-based logs and improving medical recording efficiency by 50%. Built with PHP, MySQL, JavaScript, and Bootstrap.'
               },
               {
-                href: 'https://github.com/05-14th/tourism-website',
-                img: '/images/tourism.PNG',
-                title: 'Tourism Web App',
-                desc: 'Features Camarines Norte views and delicacies with a control panel for quick updates.'
+                href: '',
+                img: '/images/image.png',
+                title: 'Thriveway MSP Cloud',
+                desc: 'A multi-tenant cloud platform that automates Microsoft 365 mailbox provisioning, Pax8 tenant onboarding, and Instantly campaign integration — with RBAC, audit logging, and Microsoft SSO built in. Streamlined day-to-day operations and lifted company production efficiency by 65%. Built with React (TypeScript), Python, and PowerShell.'
               },
               {
                 href: 'https://youtu.be/LTV6D4djs4U?si=PhUe2S-2AzqHnhnx',
                 img: '/images/punctoai.png',
                 title: 'Puncto Ai',
-                desc: 'Grammar, punctuation, and spelling correction with highlighting. Powered by datasets from Hugging Face.'
+                desc: 'An AI-assisted grammar, punctuation, and spelling tool that highlights and corrects mistakes in real time — capable of resolving up to 95% of punctuation errors across 500-word inputs using Hugging Face-trained models. Built with Python, FastAPI, and React (TypeScript).'
               },
               {
                 href: 'https://youtu.be/XAl52Pq1FZs?si=GP8Q9Sbno5gePuOd',
                 img: '/images/biohome.png',
                 title: 'BioHome Game',
-                desc: 'Educational Android game about biomolecules. Teaches with interactive gameplay.'
+                desc: 'An educational Android game that teaches biomolecules through interactive exploration, puzzles, and narrative-driven gameplay — designed to spark curiosity and sustain student interest in biology. Built with Godot and C#.'
               },
               {
                 href: 'https://doi.org/10.5281/zenodo.14510257',
