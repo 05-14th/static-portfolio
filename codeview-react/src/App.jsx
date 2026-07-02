@@ -3,31 +3,99 @@ import HeroThreeBG from './components/HeroThreeBG'
 import useScrollReveal from './hooks/useScrollReveal'
 import './styles.css'
 
+const SKILLS = [
+  ['/images/icons/php.svg', 'PHP'],
+  ['/images/icons/python.svg', 'Python'],
+  ['/images/icons/csharp.svg', 'C#'],
+  ['/images/icons/vbnet.svg', 'VB.NET'],
+  ['/images/icons/javascript.svg', 'JavaScript'],
+  ['/images/icons/typescript.svg', 'TypeScript'],
+  ['/images/icons/react.svg', 'React'],
+  ['/images/icons/bootstrap.svg', 'Bootstrap'],
+  ['/images/icons/tailwind.svg', 'Tailwind'],
+  ['/images/icons/mysql.svg', 'MySQL'],
+  ['/images/icons/mongodb.svg', 'MongoDB'],
+  ['/images/icons/android.svg', 'Android'],
+  ['/images/icons/firebase.svg', 'Firebase'],
+  ['/images/icons/godot.svg', 'Godot'],
+]
+
+const WORKS = [
+  {
+    href: 'https://youtu.be/NiuGTn1yQ-k?si=CBiQFNwja7SIThWX',
+    img: '/images/olsmg.png',
+    title: 'Transaction Recording System',
+    desc: 'A VB.NET-powered point-of-sale solution that streamlines product transactions through automatic computations, instant receipt printing, and an intuitive cashier-friendly interface — cutting down manual entry errors and boosting store recording efficiency by 30%. Built with VB.NET and MySQL.'
+  },
+  {
+    href: 'https://github.com/05-14th/Medical_Recording_System',
+    img: '/images/mediweb.png',
+    title: 'Medical Recording Web App',
+    desc: 'A PHP-based web platform that digitizes patient profiles, prescriptions, and visit histories with a clean input-output workflow — replacing tedious paper-based logs and improving medical recording efficiency by 50%. Built with PHP, MySQL, JavaScript, and Bootstrap.'
+  },
+  {
+    href: '',
+    img: '/images/image.png',
+    title: 'Thriveway MSP Cloud',
+    desc: 'A multi-tenant cloud platform that automates Microsoft 365 mailbox provisioning, Pax8 tenant onboarding, and Instantly campaign integration — with RBAC, audit logging, and Microsoft SSO built in. Streamlined day-to-day operations and lifted company production efficiency by 65%. Built with React (TypeScript), Python, and PowerShell.'
+  },
+  {
+    href: 'https://youtu.be/LTV6D4djs4U?si=PhUe2S-2AzqHnhnx',
+    img: '/images/punctoai.png',
+    title: 'Puncto Ai',
+    desc: 'An AI-assisted grammar, punctuation, and spelling tool that highlights and corrects mistakes in real time — capable of resolving up to 95% of punctuation errors across 500-word inputs using Hugging Face-trained models. Built with Python, FastAPI, and React (TypeScript).'
+  },
+  {
+    href: 'https://youtu.be/XAl52Pq1FZs?si=GP8Q9Sbno5gePuOd',
+    img: '/images/biohome.png',
+    title: 'BioHome Game',
+    desc: 'An educational Android game that teaches biomolecules through interactive exploration, puzzles, and narrative-driven gameplay — designed to spark curiosity and sustain student interest in biology. Built with Godot and C#.'
+  },
+  {
+    href: 'https://doi.org/10.5281/zenodo.14510257',
+    img: '/images/simulation.jpeg',
+    title: 'Queen Pineapple Supply Chain Simulation',
+    desc: 'A research-backed simulation study analyzing the Queen Pineapple supply chain in Camarines Norte — modeling logistics flows, identifying bottlenecks, and informing data-driven strategies for local growers and distributors. Published as an academic paper and built with AnyLogic and Java.'
+  },
+]
+
+const SOCIALS = [
+  ['https://www.instagram.com/itsgerrykun/', '/images/icons/instagram.svg', 'Instagram', 'social-icon'],
+  ['https://www.linkedin.com/in/gerry-vien-flores-224811248/', '/images/icons/linkedin.svg', 'LinkedIn', 'social-icon'],
+  ['https://github.com/05-14th', '/images/icons/github.svg', 'GitHub', 'social-icon bg-white rounded'],
+]
+
 export default function App() {
-  // Handles closing the navbar on link click
+  // Collapse the mobile navbar after a link is tapped
   useEffect(() => {
     const links = document.querySelectorAll('.navbar-nav .nav-link')
-    links.forEach((l) =>
-      l.addEventListener('click', () => {
-        const navbar = document.getElementById('navbarNav')
-        if (navbar?.classList.contains('show')) {
-          const toggler = document.querySelector('.navbar-toggler')
-          toggler?.click()
-        }
-      })
-    )
+    const close = () => {
+      const navbar = document.getElementById('navbarNav')
+      if (navbar?.classList.contains('show')) {
+        document.querySelector('.navbar-toggler')?.click()
+      }
+    }
+    links.forEach((l) => l.addEventListener('click', close))
+    return () => links.forEach((l) => l.removeEventListener('click', close))
   }, [])
 
-  // Initialize scroll animations
   useScrollReveal('.reveal')
 
   return (
     <div>
       {/* Navbar */}
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" aria-label="Main">
         <div className="container">
-          <a className="navbar-brand" href="#">CodeView</a>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <a className="navbar-brand" href="#home">CodeView</a>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
@@ -42,12 +110,12 @@ export default function App() {
       </nav>
 
       {/* Hero Section with Three.js background */}
-      <section id="home" className="hero-section reveal">
+      <section id="home" className="hero-section">
         <HeroThreeBG />
         <div className="container position-relative content-spacing">
           <div className="row align-items-center">
             <div className="col-lg-4 text-center mb-4 mb-lg-0">
-              <img src="/images/flores.png" alt="Author" className="img-fluid profile-pic" />
+              <img src="/images/flores.png" alt="Gerry Vien Flores" className="img-fluid profile-pic" />
             </div>
             <div className="col-lg-8">
               <div className="text-panel">
@@ -82,25 +150,10 @@ export default function App() {
 
           {/* Mark row as a stagger group */}
           <div className="row g-3 justify-content-center" data-sr="stagger">
-            {[
-              ['https://www.php.net/images/logos/new-php-logo.svg','PHP'],
-              ['https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg','Python'],
-              ['https://upload.wikimedia.org/wikipedia/commons/b/bd/Logo_C_sharp.svg','C#'],
-              ['https://upload.wikimedia.org/wikipedia/commons/4/40/VB.NET_Logo.svg','VB.NET'],
-              ['https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg','JavaScript'],
-              ['https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg','TypeScript'],
-              ['https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg','React'],
-              ['https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg','Bootstrap'],
-              ['https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg','Tailwind'],
-              ['https://upload.wikimedia.org/wikipedia/commons/0/0a/MySQL_textlogo.svg','MySQL'],
-              ['https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg','MongoDB'],
-              ['https://www.vectorlogo.zone/logos/android/android-icon.svg','Android'],
-              ['https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg','Firebase'],
-              ['https://www.vectorlogo.zone/logos/godotengine/godotengine-icon.svg','Godot'],
-            ].map(([src, alt]) => (
+            {SKILLS.map(([src, alt]) => (
               <div key={alt} className="col-4 col-md-2 text-center reveal">
                 <div className="skill-badge" title={alt}>
-                  <img src={src} alt={alt} className="skill-icon" />
+                  <img src={src} alt={alt} className="skill-icon" loading="lazy" />
                   <span className="skill-label">{alt}</span>
                 </div>
               </div>
@@ -119,48 +172,17 @@ export default function App() {
 
           {/* Stagger the cards */}
           <div className="row g-4" data-sr="stagger">
-            {[
-              {
-                href: 'https://youtu.be/NiuGTn1yQ-k?si=CBiQFNwja7SIThWX',
-                img: '/images/olsmg.png',
-                title: 'Transaction Recording System',
-                desc: 'A VB.NET-powered point-of-sale solution that streamlines product transactions through automatic computations, instant receipt printing, and an intuitive cashier-friendly interface — cutting down manual entry errors and boosting store recording efficiency by 30%. Built with VB.NET and MySQL.'
-              },
-              {
-                href: 'https://github.com/05-14th/Medical_Recording_System',
-                img: '/images/mediweb.png',
-                title: 'Medical Recording Web App',
-                desc: 'A PHP-based web platform that digitizes patient profiles, prescriptions, and visit histories with a clean input-output workflow — replacing tedious paper-based logs and improving medical recording efficiency by 50%. Built with PHP, MySQL, JavaScript, and Bootstrap.'
-              },
-              {
-                href: '',
-                img: '/images/image.png',
-                title: 'Thriveway MSP Cloud',
-                desc: 'A multi-tenant cloud platform that automates Microsoft 365 mailbox provisioning, Pax8 tenant onboarding, and Instantly campaign integration — with RBAC, audit logging, and Microsoft SSO built in. Streamlined day-to-day operations and lifted company production efficiency by 65%. Built with React (TypeScript), Python, and PowerShell.'
-              },
-              {
-                href: 'https://youtu.be/LTV6D4djs4U?si=PhUe2S-2AzqHnhnx',
-                img: '/images/punctoai.png',
-                title: 'Puncto Ai',
-                desc: 'An AI-assisted grammar, punctuation, and spelling tool that highlights and corrects mistakes in real time — capable of resolving up to 95% of punctuation errors across 500-word inputs using Hugging Face-trained models. Built with Python, FastAPI, and React (TypeScript).'
-              },
-              {
-                href: 'https://youtu.be/XAl52Pq1FZs?si=GP8Q9Sbno5gePuOd',
-                img: '/images/biohome.png',
-                title: 'BioHome Game',
-                desc: 'An educational Android game that teaches biomolecules through interactive exploration, puzzles, and narrative-driven gameplay — designed to spark curiosity and sustain student interest in biology. Built with Godot and C#.'
-              },
-              {
-                href: 'https://doi.org/10.5281/zenodo.14510257',
-                img: '/images/simulation.jpeg',
-                title: 'Queen Pineapple Supply Chain Simulation',
-                desc: 'A research-backed simulation study analyzing the Queen Pineapple supply chain in Camarines Norte — modeling logistics flows, identifying bottlenecks, and informing data-driven strategies for local growers and distributors. Published as an academic paper and built with AnyLogic and Java.'
-              },
-            ].map(card => (
+            {WORKS.map(card => (
               <div key={card.title} className="col-12 col-md-6 col-lg-4 text-white reveal">
                 <div className="project-card interactive">
                   <div className="thumb-wrap">
-                    <a href={card.href}><img src={card.img} alt={card.title} className="project-img" /></a>
+                    {card.href ? (
+                      <a href={card.href} target="_blank" rel="noopener noreferrer">
+                        <img src={card.img} alt={card.title} className="project-img" loading="lazy" />
+                      </a>
+                    ) : (
+                      <img src={card.img} alt={card.title} className="project-img" loading="lazy" />
+                    )}
                   </div>
                   <h5 className="text-center">{card.title}</h5>
                   <p>{card.desc}</p>
@@ -176,21 +198,13 @@ export default function App() {
         <div className="container">
           <h2 className="mb-4">Let&apos;s connect!</h2>
           <div className="row justify-content-center g-3 mb-4">
-            <div className="col-auto">
-              <a href="https://www.instagram.com/itsgerrykun/" className="text-decoration-none">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" className="social-icon" />
-              </a>
-            </div>
-            <div className="col-auto">
-              <a href="https://www.linkedin.com/in/gerry-vien-flores-224811248/" className="text-decoration-none">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn" className="social-icon" />
-              </a>
-            </div>
-            <div className="col-auto">
-              <a href="https://github.com/05-14th" className="text-decoration-none">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" className="social-icon bg-white rounded" />
-              </a>
-            </div>
+            {SOCIALS.map(([href, img, label, cls]) => (
+              <div key={label} className="col-auto">
+                <a href={href} target="_blank" rel="noopener noreferrer" className="text-decoration-none" aria-label={label}>
+                  <img src={img} alt={label} className={cls} />
+                </a>
+              </div>
+            ))}
           </div>
           <p className="mb-0">CodeView &copy; 2025</p>
         </div>

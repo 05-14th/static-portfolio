@@ -34,6 +34,7 @@ export default function HeroThreeBG() {
     const light = new THREE.AmbientLight(0x3355ff, 0.4)
     scene.add(light)
 
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     const clock = new THREE.Clock()
     function animate() {
       const t = clock.getElapsedTime()
@@ -42,7 +43,11 @@ export default function HeroThreeBG() {
       renderer.render(scene, camera)
       requestRef.current = requestAnimationFrame(animate)
     }
-    animate()
+    if (reduceMotion) {
+      renderer.render(scene, camera) // one static frame, no rAF loop
+    } else {
+      animate()
+    }
 
     function onResize() {
       const { clientWidth, clientHeight } = container

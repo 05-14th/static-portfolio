@@ -309,3 +309,11 @@ section::after {
   line-height: 1.75;
   font-size: 16px;
 }
+
+/* Respect users who ask for less motion */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  body::before { animation: none; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .project-card, .project-img, .skill-badge, .skill-icon, .social-icon { transition: none; }
+}
