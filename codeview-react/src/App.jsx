@@ -89,22 +89,16 @@ export default function App() {
         </div>
       </section>
 
-      {/* Skills Section */}
-      <section
-        id="skills"
-        className="content-spacing d-flex justify-content-center align-items-center vh-100 section-surface reveal"
-      >
-        <div className="d-block text-center">
-          <h2 className="mb-4 text-white">My Current Skillset</h2>
+      {/* Skills Section — auto-fill grid grows with any number of skills */}
+      <section id="skills" className="section-surface reveal">
+        <div className="container">
+          <h2 className="section-heading text-center text-white">My Current Skillset</h2>
 
-          {/* Mark row as a stagger group */}
-          <div className="row g-3 justify-content-center" data-sr="stagger">
+          <div className="skills-grid" data-sr="stagger">
             {skills.map(({ icon, label }) => (
-              <div key={label} className="col-4 col-md-2 text-center reveal">
-                <div className="skill-badge" title={label}>
-                  <img src={icon} alt={label} className="skill-icon" loading="lazy" />
-                  <span className="skill-label">{label}</span>
-                </div>
+              <div key={label} className="skill-badge reveal" title={label}>
+                <img src={icon} alt={label} className="skill-icon" loading="lazy" />
+                <span className="skill-label">{label}</span>
               </div>
             ))}
           </div>
@@ -112,10 +106,7 @@ export default function App() {
       </section>
 
       {/* Works */}
-      <section
-        id="works"
-        className="content-spacing d-flex justify-content-center align-items-center min-vh-100 section-surface reveal"
-      >
+      <section id="works" className="section-surface reveal">
         <div className="container">
           <h2 className="section-heading text-center text-white">My Works</h2>
 
@@ -151,11 +142,7 @@ export default function App() {
 
       {/* Custom sections (added from the editor) */}
       {sections.map((s) => (
-        <section
-          key={s.id}
-          id={s.id}
-          className="content-spacing d-flex justify-content-center align-items-center min-vh-100 section-surface reveal"
-        >
+        <section key={s.id} id={s.id} className="section-surface reveal">
           <div className="container text-center text-white" style={{ maxWidth: 820 }}>
             <h2 className="section-heading text-white">{s.title}</h2>
             {s.image && (
