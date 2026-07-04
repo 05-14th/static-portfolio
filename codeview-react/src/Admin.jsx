@@ -42,6 +42,26 @@ function ImageField({ value, onChange }) {
   )
 }
 
+// Multi-select toggle grid of all skill logos — click to add/remove
+function StackPicker({ value = [], skills, onChange }) {
+  const toggle = (label) =>
+    onChange(value.includes(label) ? value.filter((l) => l !== label) : [...value, label])
+  return (
+    <div className="d-flex flex-wrap gap-2">
+      {skills.map(({ icon, label }) => {
+        const on = value.includes(label)
+        return (
+          <button key={label} type="button" title={label} onClick={() => toggle(label)}
+            className={`btn btn-sm d-flex align-items-center gap-1 ${on ? 'btn-primary' : 'btn-outline-secondary'}`}>
+            <img src={icon} alt="" style={{ width: 20, height: 20, objectFit: 'contain' }} />
+            {label}
+          </button>
+        )
+      })}
+    </div>
+  )
+}
+
 function Card({ title, action, children }) {
   return (
     <section className="bg-white rounded-3 shadow-sm border mb-4">
@@ -55,7 +75,7 @@ function Card({ title, action, children }) {
 }
 
 // Flat add/remove list (skills, projects, socials)
-function ListEditor({ title, items, fields, template, onChange }) {
+function ListEditor({ title, items, fields, template, onChange, skills }) {
   const setItem = (i, key, val) => onChange(items.map((it, j) => (j === i ? { ...it, [key]: val } : it)))
   return (
     <Card title={title} action={<button className="btn btn-sm btn-primary" onClick={() => onChange([...items, { ...template }])}>+ Add</button>}>
@@ -68,6 +88,8 @@ function ListEditor({ title, items, fields, template, onChange }) {
                 <label className="form-label small mb-1">{f.label}</label>
                 {f.type === 'image'
                   ? <ImageField value={it[f.key] ?? ''} onChange={(v) => setItem(i, f.key, v)} />
+                  : f.type === 'stack'
+                  ? <StackPicker value={it[f.key] ?? []} skills={skills || []} onChange={(v) => setItem(i, f.key, v)} />
                   : f.type === 'textarea'
                   ? <textarea className="form-control" rows={3} value={it[f.key] ?? ''} onChange={(e) => setItem(i, f.key, e.target.value)} />
                   : <input className="form-control" value={it[f.key] ?? ''} onChange={(e) => setItem(i, f.key, e.target.value)} />}
@@ -200,9 +222,9 @@ export default function Admin() {
           onChange={(v) => setSection('skills', v)}
           fields={[{ key: 'label', label: 'Label' }, { key: 'icon', label: 'Icon', type: 'image' }]} />
 
-        <ListEditor title="Projects / Works" items={data.projects} template={{ href: '', img: '', title: '', desc: '' }}
-          onChange={(v) => setSection('projects', v)}
-          fields={[{ key: 'title', label: 'Title' }, { key: 'href', label: 'Link (optional)' }, { key: 'img', label: 'Image', type: 'image' }, { key: 'desc', label: 'Description', type: 'textarea', col: 12 }]} />
+        <ListEditor title="Projects / Works" items={data.projects} template={{ href: '', img: '', title: '', desc: '', stack: [] }}
+          onChange={(v) => setSection('projects', v)} skills={data.skills}
+          fields={[{ key: 'title', label: 'Title' }, { key: 'href', label: 'Link (optional)' }, { key: 'img', label: 'Image', type: 'image' }, { key: 'desc', label: 'Description', type: 'textarea', col: 12 }, { key: 'stack', label: 'Stack logos (click to toggle)', type: 'stack', col: 12 }]} />
 
         <SectionsEditor sections={data.sections} onChange={(v) => setSection('sections', v)} />
 
