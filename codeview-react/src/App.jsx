@@ -7,6 +7,11 @@ import './styles.css'
 // Turn a section title into a stable anchor id ("My Awards" -> "my-awards")
 const slug = (s) => (s || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
 
+// Resolve a project's manually-set "stack" labels to skill icons.
+// Add e.g. "stack": ["PHP", "MySQL"] to a project in content.json.
+const stackFor = (card, skills) =>
+  (card.stack || []).map((label) => skills.find((s) => s.label === label)).filter(Boolean)
+
 export default function App() {
   const { profile, skills, projects, socials } = content
   const sections = (content.sections || []).map((s, i) => ({ ...s, id: slug(s.title) || `section-${i}` }))
@@ -130,6 +135,13 @@ export default function App() {
                   </div>
                   <h5 className="text-center">{card.title}</h5>
                   <p>{card.desc}</p>
+                  {stackFor(card, skills).length > 0 && (
+                    <div className="stack-row" aria-label="Tech stack">
+                      {stackFor(card, skills).map(({ icon, label }) => (
+                        <img key={label} src={icon} alt={label} title={label} className="stack-logo" loading="lazy" />
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
