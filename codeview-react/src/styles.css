@@ -310,6 +310,15 @@ section::after {
   font-size: 16px;
 }
 
+/* === Editor view: plain background, no portfolio backdrop/glow === */
+body.editing {
+  background: #f4f5f7;
+  color: #1f2328;
+}
+body.editing::before { display: none; }
+body.editing section::before,
+body.editing section::after { display: none; }
+
 /* Respect users who ask for less motion */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

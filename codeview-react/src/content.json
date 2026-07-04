@@ -1,0 +1,156 @@
+{
+  "sections": [],
+  "profile": {
+    "name": "Gerry Vien Flores",
+    "subtitle": "Software Developer • IT Student",
+    "image": "/images/CCMS9410.jpg",
+    "bio": [
+      "Hi, I’m a Software Developer at Clario Capital and a Bachelor of Science in Information Technology graduate from the University of Camarines Norte. I specialize in web development, custom software, and intelligent automation, helping turn complex workflows into streamlined, scalable, and reliable systems.",
+      "I value efficiency, integrity, and purposeful work. Every project I build is guided by the goal of creating practical digital solutions that are not only functional, but also trustworthy and impactful."
+    ]
+  },
+  "skills": [
+    {
+      "icon": "/images/icons/php.svg",
+      "label": "PHP"
+    },
+    {
+      "icon": "/images/icons/python.svg",
+      "label": "Python"
+    },
+    {
+      "icon": "/images/icons/csharp.svg",
+      "label": "C#"
+    },
+    {
+      "icon": "/images/icons/vbnet.svg",
+      "label": "VB.NET"
+    },
+    {
+      "icon": "/images/icons/javascript.svg",
+      "label": "JavaScript"
+    },
+    {
+      "icon": "/images/icons/typescript.svg",
+      "label": "TypeScript"
+    },
+    {
+      "icon": "/images/icons/react.svg",
+      "label": "React"
+    },
+    {
+      "icon": "/images/icons/bootstrap.svg",
+      "label": "Bootstrap"
+    },
+    {
+      "icon": "/images/icons/tailwind.svg",
+      "label": "Tailwind"
+    },
+    {
+      "icon": "/images/icons/mysql.svg",
+      "label": "MySQL"
+    },
+    {
+      "icon": "/images/icons/mongodb.svg",
+      "label": "MongoDB"
+    },
+    {
+      "icon": "/images/icons/android.svg",
+      "label": "Android"
+    },
+    {
+      "icon": "/images/icons/firebase.svg",
+      "label": "Firebase"
+    },
+    {
+      "icon": "/images/icons/godot.svg",
+      "label": "Godot"
+    },
+    {
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Monday_logo.svg",
+      "label": "Monday.com"
+    },
+    {
+      "icon": "/images/claude-color.png",
+      "label": "Claude"
+    },
+    {
+      "icon": "/images/codex-logo-colored-light-svg.svg",
+      "label": "Codex"
+    },
+    {
+      "icon": "/images/linear-icon.svg",
+      "label": "Linear"
+    },
+    {
+      "icon": "/images/Instantly-ai_idgr5GP4e__1.svg",
+      "label": "Instantly.ai"
+    },
+    {
+      "icon": "/images/openai-svgrepo-com.svg",
+      "label": "Chatgpt"
+    },
+    {
+      "icon": "/images/supabase-logo_svgstack_com_51581783190901.svg",
+      "label": "Supabase"
+    }
+  ],
+  "projects": [
+    {
+      "href": "https://youtu.be/NiuGTn1yQ-k?si=CBiQFNwja7SIThWX",
+      "img": "/images/olsmg.png",
+      "title": "Transaction Recording System",
+      "desc": "A VB.NET-powered point-of-sale solution that streamlines product transactions through automatic computations, instant receipt printing, and an intuitive cashier-friendly interface — cutting down manual entry errors and boosting store recording efficiency by 30%. Built with VB.NET and MySQL."
+    },
+    {
+      "href": "https://github.com/05-14th/Medical_Recording_System",
+      "img": "/images/mediweb.png",
+      "title": "Medical Recording Web App",
+      "desc": "A PHP-based web platform that digitizes patient profiles, prescriptions, and visit histories with a clean input-output workflow — replacing tedious paper-based logs and improving medical recording efficiency by 50%. Built with PHP, MySQL, JavaScript, and Bootstrap."
+    },
+    {
+      "href": "",
+      "img": "/images/image.png",
+      "title": "Thriveway MSP Cloud",
+      "desc": "A multi-tenant cloud platform that automates Microsoft 365 mailbox provisioning, Pax8 tenant onboarding, and Instantly campaign integration — with RBAC, audit logging, and Microsoft SSO built in. Streamlined day-to-day operations and lifted company production efficiency by 65%. Built with React (TypeScript), Python, and PowerShell."
+    },
+    {
+      "href": "https://youtu.be/LTV6D4djs4U?si=PhUe2S-2AzqHnhnx",
+      "img": "/images/punctoai.png",
+      "title": "Puncto Ai",
+      "desc": "An AI-assisted grammar, punctuation, and spelling tool that highlights and corrects mistakes in real time — capable of resolving up to 95% of punctuation errors across 500-word inputs using Hugging Face-trained models. Built with Python, FastAPI, and React (TypeScript)."
+    },
+    {
+      "href": "https://youtu.be/XAl52Pq1FZs?si=GP8Q9Sbno5gePuOd",
+      "img": "/images/biohome.png",
+      "title": "BioHome Game",
+      "desc": "An educational Android game that teaches biomolecules through interactive exploration, puzzles, and narrative-driven gameplay — designed to spark curiosity and sustain student interest in biology. Built with Godot and C#."
+    },
+    {
+      "href": "https://doi.org/10.5281/zenodo.14510257",
+      "img": "/images/simulation.jpeg",
+      "title": "Queen Pineapple Supply Chain Simulation",
+      "desc": "A research-backed simulation study analyzing the Queen Pineapple supply chain in Camarines Norte — modeling logistics flows, identifying bottlenecks, and informing data-driven strategies for local growers and distributors. Published as an academic paper and built with AnyLogic and Java."
+    }
+  ],
+  "socials": [
+    {
+      "href": "https://www.instagram.com/itsgerrykun/",
+      "icon": "/images/icons/instagram.svg",
+      "label": "Instagram",
+      "cls": "social-icon"
+    },
+    {
+      "href": "https://www.linkedin.com/in/gerry-vien-flores-224811248/",
+      "icon": "/images/icons/linkedin.svg",
+      "label": "LinkedIn",
+      "cls": "social-icon"
+    },
+    {
+      "href": "https://github.com/05-14th",
+      "icon": "/images/icons/github.svg",
+      "label": "GitHub",
+      "cls": "social-icon bg-white rounded"
+    }
+  ]
+}

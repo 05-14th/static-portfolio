@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xargs wc -l)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(echo \"EXIT: $?\")",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(cd d:/Projects/static-portfolio/codeview-react && echo \"=== public ===\" && ls public && echo \"=== public/images \\(count\\) ===\" && ls public/images 2>/dev/null | head -20 && echo \"...\" && ls public/images 2>/dev/null | wc -l && echo \"=== components ===\" && ls src/components && echo \"=== deploy config? ===\" && cat vite.config.js && echo \"=== any gh-pages/workflow ===\" && ls ../.github 2>/dev/null; ls .github 2>/dev/null; grep -r \"homepage\\\\|base\" package.json vite.config.js 2>/dev/null)",
+      "Read(//d/Projects/**)",
+      "Bash(curl -s http://localhost:5173/#admin)",
+      "Bash(cp src/content.json /tmp/content.bak)",
+      "Bash(curl -s -X POST http://localhost:5173/api/save -H 'Content-Type: application/json' --data '{\"profile\":{\"name\":\"TEST\"},\"skills\":[],\"projects\":[],\"socials\":[]}')",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" -X POST http://localhost:5173/api/save --data 'not json')",
+      "Bash(cp /tmp/content.bak src/content.json)",
+      "Bash(curl -s -X POST \"http://localhost:5173/api/upload?name=../../evil.png\" --data-binary @-)",
+      "Bash(rm -f public/images/evil.png)",
+      "Bash(taskkill //F //IM node.exe)",
+      "Bash(pkill -f vite)",
+      "mcp__supabase__list_projects",
+      "Bash(powershell.exe -NoProfile -Command \"git rev-parse --abbrev-ref HEAD; git remote -v | Select-Object -First 1\")"
+    ]
+  }
+}
