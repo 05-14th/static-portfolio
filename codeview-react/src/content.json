@@ -93,6 +93,14 @@
     {
       "icon": "/images/supabase-logo_svgstack_com_51581783190901.svg",
       "label": "Supabase"
+    },
+    {
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg",
+      "label": "Node.js"
+    },
+    {
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Vercel_logo_2025.svg",
+      "label": "Vercel"
     }
   ],
   "projects": [
@@ -129,7 +137,9 @@
         "Tailwind",
         "MySQL",
         "Monday.com",
-        "Instantly.ai"
+        "Instantly.ai",
+        "Claude",
+        "Node.js"
       ]
     },
     {
@@ -141,7 +151,8 @@
         "Python",
         "Tailwind",
         "TypeScript",
-        "React"
+        "React",
+        "Node.js"
       ]
     },
     {
@@ -158,7 +169,23 @@
       "href": "https://doi.org/10.5281/zenodo.14510257",
       "img": "/images/simulation.jpeg",
       "title": "Queen Pineapple Supply Chain Simulation",
-      "desc": "A research-backed simulation study analyzing the Queen Pineapple supply chain in Camarines Norte — modeling logistics flows, identifying bottlenecks, and informing data-driven strategies for local growers and distributors. Published as an academic paper and built with AnyLogic and Java."
+      "desc": "A research-backed simulation study analyzing the Queen Pineapple supply chain in Camarines Norte — modeling logistics flows, identifying bottlenecks, and informing data-driven strategies for local growers and distributors. Published as an academic paper and built with AnyLogic and Java.",
+      "stack": []
+    },
+    {
+      "href": "https://sagespend.vercel.app/",
+      "img": "/images/Screenshot 2026-07-05 193353.png",
+      "title": "SageSpend",
+      "desc": "a lightweight personal finance web app for tracking expenses, savings, and debt. It features monthly budget allocation with overspend alerts, per-loan balance tracking with automatic paid/active status, future-dated expense planning, and a dashboard of KPIs and trend charts. Built as a fully serverless React + TypeScript app: guests get full functionality with browser-local storage and CSV/JSON export, while an optional Supabase login adds cloud sync secured by row-level security — all deployed on free tiers with zero backend to maintain.",
+      "stack": [
+        "Supabase",
+        "Claude",
+        "Node.js",
+        "TypeScript",
+        "React",
+        "Tailwind",
+        "Vercel"
+      ]
     }
   ],
   "socials": [
