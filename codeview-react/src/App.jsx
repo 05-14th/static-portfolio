@@ -175,7 +175,7 @@ export default function App() {
               </div>
             ))}
           </div>
-          <p className="mb-0">CodeView &copy; 2025</p>
+          <p className="mb-0">CodeView &copy; {new Date().getFullYear()}</p>
         </div>
       </footer>
     </div>
