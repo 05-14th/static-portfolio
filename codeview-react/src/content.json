@@ -101,6 +101,14 @@
     {
       "icon": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Vercel_logo_2025.svg",
       "label": "Vercel"
+    },
+    {
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/8/89/Docker_Logo.svg",
+      "label": "Docker"
+    },
+    {
+      "icon": "/images/github-logo_svgstack_com_50361783372845.png",
+      "label": "GitHub"
     }
   ],
   "projects": [
@@ -111,7 +119,8 @@
       "desc": "A VB.NET-powered point-of-sale solution that streamlines product transactions through automatic computations, instant receipt printing, and an intuitive cashier-friendly interface — cutting down manual entry errors and boosting store recording efficiency by 30%. Built with VB.NET and MySQL.",
       "stack": [
         "VB.NET",
-        "MySQL"
+        "MySQL",
+        "GitHub"
       ]
     },
     {
@@ -122,7 +131,8 @@
       "stack": [
         "PHP",
         "MySQL",
-        "Bootstrap"
+        "Bootstrap",
+        "GitHub"
       ]
     },
     {
@@ -139,7 +149,9 @@
         "Monday.com",
         "Instantly.ai",
         "Claude",
-        "Node.js"
+        "Node.js",
+        "Docker",
+        "GitHub"
       ]
     },
     {
@@ -152,7 +164,8 @@
         "Tailwind",
         "TypeScript",
         "React",
-        "Node.js"
+        "Node.js",
+        "GitHub"
       ]
     },
     {
@@ -162,7 +175,8 @@
       "desc": "An educational Android game that teaches biomolecules through interactive exploration, puzzles, and narrative-driven gameplay — designed to spark curiosity and sustain student interest in biology. Built with Godot and C#.",
       "stack": [
         "C#",
-        "Godot"
+        "Godot",
+        "GitHub"
       ]
     },
     {
@@ -184,7 +198,8 @@
         "TypeScript",
         "React",
         "Tailwind",
-        "Vercel"
+        "Vercel",
+        "GitHub"
       ]
     }
   ],
