@@ -67,30 +67,6 @@
       "label": "Godot"
     },
     {
-      "icon": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Monday_logo.svg",
-      "label": "Monday.com"
-    },
-    {
-      "icon": "/images/claude-color.png",
-      "label": "Claude"
-    },
-    {
-      "icon": "/images/codex-logo-colored-light-svg.svg",
-      "label": "Codex"
-    },
-    {
-      "icon": "/images/linear-icon.svg",
-      "label": "Linear"
-    },
-    {
-      "icon": "/images/Instantly-ai_idgr5GP4e__1.svg",
-      "label": "Instantly.ai"
-    },
-    {
-      "icon": "/images/openai-svgrepo-com.svg",
-      "label": "Chatgpt"
-    },
-    {
       "icon": "/images/supabase-logo_svgstack_com_51581783190901.svg",
       "label": "Supabase"
     },
@@ -190,7 +166,7 @@
       "href": "https://sagespend.vercel.app/",
       "img": "/images/Screenshot 2026-07-05 193353.png",
       "title": "SageSpend",
-      "desc": "a lightweight personal finance web app for tracking expenses, savings, and debt. It features monthly budget allocation with overspend alerts, per-loan balance tracking with automatic paid/active status, future-dated expense planning, and a dashboard of KPIs and trend charts. Built as a fully serverless React + TypeScript app: guests get full functionality with browser-local storage and CSV/JSON export, while an optional Supabase login adds cloud sync secured by row-level security — all deployed on free tiers with zero backend to maintain.",
+      "desc": "A lightweight personal finance web app for tracking expenses, savings, and debt — with monthly budget allocation, overspend alerts, per-loan balance tracking, and a dashboard of KPIs and trend charts. Built as a fully serverless React + TypeScript app: guests get full functionality with local storage and CSV/JSON export, while optional Supabase login adds cloud sync secured by row-level security.",
       "stack": [
         "Supabase",
         "Claude",
